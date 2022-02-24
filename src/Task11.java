@@ -1,6 +1,4 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Task11 {
     public static void main(String[] args) {
