@@ -18,7 +18,8 @@ public class FindFac {
 
         while (num>0){
             ans = ans.multiply(BigInteger.valueOf(num));
-            num--;
+
+            num-=1;
         }
         return ans;
     }
