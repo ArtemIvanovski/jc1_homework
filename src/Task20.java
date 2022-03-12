@@ -13,6 +13,7 @@ public class Task20 {
                 max=a[i];
                 maxIndex=i;
             }
+
         return maxIndex;
     }
 }
