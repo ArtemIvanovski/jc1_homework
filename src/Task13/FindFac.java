@@ -16,11 +16,10 @@ public class FindFac {
     private BigInteger Fac(int num){
         BigInteger ans = BigInteger.valueOf(1);
 
-        while (num>0){
+        do {
             ans = ans.multiply(BigInteger.valueOf(num));
-
             num-=1;
-        }
+        }while(num>0);
         return ans;
     }
 }
