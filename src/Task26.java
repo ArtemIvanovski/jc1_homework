@@ -31,7 +31,7 @@ public class Task26 {
         return count;
     }
 
-    private static String input() {
+    public static String input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите строку: ");
         return scanner.nextLine();
