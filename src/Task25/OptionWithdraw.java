@@ -10,6 +10,7 @@ public class OptionWithdraw {
 
     public boolean findOption(int valueOfMoney){
         options = new Option[3];
+
         int count=0;
         boolean flag = false;
         for (int a=moneyStorage.getDenominationOf100();a>=0;a--)

@@ -15,15 +15,22 @@ public class ATMMachine{
     }
 
     public void Work(){
-        valueOfMoney = inputValueOFMoney();
-        if (findOptions(valueOfMoney)){
-            showOptions();
-            int optionNumber = selectOptions();
-            reduceMoney(optionNumber);
-            giveMoney();
-        }else{
-            showNoMoney();
+        while (true) {
+            valueOfMoney = inputValueOFMoney();
+            if (findOptions(valueOfMoney)) {
+                showOptions();
+                int optionNumber = selectOptions();
+                reduceMoney(optionNumber);
+                giveMoney();
+            } else {
+                showNoMoney();
+            }
+            if (!goContinue()) break;
         }
+    }
+
+    private boolean goContinue() {
+        return userDisplay.printContinue();
     }
 
 

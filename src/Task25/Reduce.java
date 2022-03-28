@@ -7,11 +7,8 @@ public class Reduce {
     }
 
     public void reduceMoney(Option[] options, int optionNumber){
-        int  a = moneyStorage.getDenominationOf20()-options[optionNumber].getCount20();
-        int  b = moneyStorage.getDenominationOf50()-options[optionNumber].getCount50();
-        int  c = moneyStorage.getDenominationOf100()-options[optionNumber].getCount100();
-        moneyStorage.setDenominationOf20(a);
-        moneyStorage.setDenominationOf50(b);
-        moneyStorage.setDenominationOf100(c);
+        moneyStorage.decreaseDenominationOf20(options[optionNumber].getCount20());
+        moneyStorage.decreaseDenominationOf50(options[optionNumber].getCount50());
+        moneyStorage.decreaseDenominationOf100(options[optionNumber].getCount100());
     }
 }

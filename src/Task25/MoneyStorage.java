@@ -28,4 +28,13 @@ public class MoneyStorage {
     public void setDenominationOf100(int denominationOf100) {
         this.denominationOf100 = denominationOf100;
     }
+    public void decreaseDenominationOf20(int a){
+        denominationOf20-=a;
+    }
+    public void decreaseDenominationOf50(int a){
+        denominationOf50-=a;
+    }
+    public void decreaseDenominationOf100(int a){
+        denominationOf100-=a;
+    }
 }

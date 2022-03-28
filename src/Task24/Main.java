@@ -17,11 +17,11 @@ public class Main {
     private static Time input() {
         InputCheck inputCheck = new InputCheck();
         System.out.println("Введите колво секунд");
-        int seconds = inputCheck.inputCheck();
+        int seconds = inputCheck.inputCheck("");
         System.out.println("Введите колво минут");
-        int minutes = inputCheck.inputCheck();
+        int minutes = inputCheck.inputCheck("");
         System.out.println("Введите колво часов");
-        int hours = inputCheck.inputCheck();
+        int hours = inputCheck.inputCheck("");
         return new Time(seconds,minutes,hours);
     }
     private static void print(Time time){
