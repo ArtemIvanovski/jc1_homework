@@ -18,6 +18,9 @@ public class FunctionString {
                 flag = false;
                 break;
             }
+        if (flag){
+            System.out.println("В строке нет слов");
+        }
         return flag;
     }
     public int countWords(String s){
@@ -38,4 +41,32 @@ public class FunctionString {
         System.out.println("Введите строку: ");
         return scanner.nextLine();
     }
+    public String textFromLastLetters(String s){
+        StringBuilder ansStr = new StringBuilder("");
+        s = s.trim();
+        char [] text = s.toCharArray();
+        for (int i=0;i < text.length-1;i++)
+            if ((text[i+1] == ' ' || text[i+1] == '!' || text[i+1] == '.'
+                    || text[i+1] == '?' || text[i+1] == ',' || i == text.length) && Character.isLetter(text[i]))
+                ansStr.append(text[i]);
+        if (Character.isLetter(text[text.length-1]))
+            ansStr.append(text[text.length-1]);
+        return ansStr.toString();
+    }
+    public int countingPunctuationMarks(String str) {
+        int count = 0;
+        char[] punctuationMarks = {',' , '.' , '!' , '?' , ':' , ';' , '"' , '—' , '(' , ')' , '[' , ']'};
+        for (int i = 0;i < punctuationMarks.length;i++){
+            int p = 0;
+            while (p != -1){
+                p = str.indexOf(punctuationMarks[i],p);
+                if (p != -1){
+                    p++;
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
 }
