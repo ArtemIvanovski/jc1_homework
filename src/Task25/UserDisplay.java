@@ -18,7 +18,6 @@ public class UserDisplay{
         moneyStorage.setDenominationOf100(inputCheck.inputCheck(""));
     }
 
-
     public int inputValue() {
         System.out.println("Enter the amount of money you want to withdraw");
         return inputCheck.inputCheck("");
