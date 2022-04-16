@@ -2,8 +2,8 @@ package Task35;
 
 public enum SeasonsOfTheYear {
     WINTER("Морозная, лютая, снежная, новогодняя",90),
-    SUMMER("Жаркое, солнечное, купальное, веселое", 92),
     SPRING("Ранняя, дождливая,цветущая",92),
+    SUMMER("Жаркое, солнечное, купальное, веселое", 92),
     AUTUMN("Пасмурная, хмурая, желтая, дождливая",91);
     
     private final String description;
