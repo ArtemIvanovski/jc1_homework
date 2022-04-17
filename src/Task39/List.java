@@ -50,6 +50,16 @@ public class List {
                 i++;
         }
     }
+    public int maxMarks(){
+        iterator = list.iterator();
+        Integer max = iterator.next();
+        while (iterator.hasNext()) {
+            Integer element = iterator.next();
+            if (element > max)
+                max = element;
+        }
+        return max;
+    }
 
 
 }
