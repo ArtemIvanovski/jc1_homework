@@ -3,8 +3,8 @@ package Task39;
 import java.util.Scanner;
 
 public class Input {
-    public int input(){
-        System.out.println("Input count of students: ");
+    public int input(String str){
+        System.out.println(str);
         boolean isCorrectValue = false;
         int value = 0;
         Scanner scanner = new Scanner(System.in);

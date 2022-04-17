@@ -1,8 +1,6 @@
 package Task39;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Random;
+import java.util.*;
 
 public class List {
 
@@ -25,7 +23,7 @@ public class List {
     }
 
     public void showArrayList(String str){
-        System.out.println("Marks" + str + ":");
+        System.out.println(str);
         for (Integer element: list) {
             System.out.print(element + " ");
         }
@@ -42,5 +40,16 @@ public class List {
             System.exit(0);
         }
     }
+    public void removeRepeatNumbers(){
+        Collections.sort(list);
+        int i = 0;
+        while (i < list.size() - 1){
+            if (list.get(i) == list.get(i + 1)){
+                list.remove(i);
+            }else
+                i++;
+        }
+    }
+
 
 }
