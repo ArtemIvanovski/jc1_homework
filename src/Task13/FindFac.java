@@ -1,12 +1,14 @@
 package Task13;
 
+import Task44.MyException;
+
 import java.math.BigInteger;
 
 public class FindFac {
 
-    public BigInteger FindFac(int number){
+    public BigInteger FindFac(int number) throws MyException {
         long ans;
-        if (number<2)
+        if (number > 0 && number<2)
             return BigInteger.valueOf(1);
         else
             return Fac(number);
