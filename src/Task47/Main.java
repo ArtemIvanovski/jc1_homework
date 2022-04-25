@@ -10,3 +10,4 @@ public class Main {
         new Console().showCountOfWords(text);
     }
 }
+//D:\work\src\Task47\text
