@@ -4,6 +4,7 @@ import Task39.List;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class FunctionOfList{
 
@@ -31,5 +32,25 @@ public class FunctionOfList{
         }
         return list;
     }
+
+    public ArrayList<Integer> fillList(int count){
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < count; i++){
+            int randomValue = new Random().nextInt(6)+1;
+            list.add(randomValue);
+        }
+        return list;
+    }
+
+    public double findMean(ArrayList<Integer> list, int count){
+        double mean = 0;
+        try {
+            mean = sumElementsOfList(list) / count;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return mean;
+    }
+
 
 }
