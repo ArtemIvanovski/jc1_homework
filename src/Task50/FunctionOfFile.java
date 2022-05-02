@@ -37,7 +37,7 @@ public class FunctionOfFile {
     public ArrayList<String> readFromFile(ArrayList<String> path) {
         ArrayList<String> arrayList = new ArrayList<>();
         try {
-            for (String pathToFile: path) {
+            for (String pathToFile : path) {
                 File file = new File(pathToFile);
                 Scanner scanner = new Scanner(file);
                 while (scanner.hasNextLine()) {

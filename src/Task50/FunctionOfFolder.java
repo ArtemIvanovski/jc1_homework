@@ -26,16 +26,16 @@ public class FunctionOfFolder {
     public void createStructureOfFilesAndFolders() {
         String mainPath = createFolders(nameOfMainFolder, valueOfFolder);
         listOfPath = createFiles(nameOfFile, valueOfFile, mainPath);
-        for (String path: listOfPath) {
-            new FunctionOfFile().writeInFile(path,new FunctionOfList().fillList(valueOfNumber), " ");
+        for (String path : listOfPath) {
+            new FunctionOfFile().writeInFile(path, new FunctionOfList().fillList(valueOfNumber), " ");
         }
         ArrayList<String> listOfNumber = new FunctionOfFile().readFromFile(listOfPath);
-        listOfPath.add(new FunctionOfFile().createNewFile(mainPath,nameOfInformationFromFiles));
-        new FunctionOfFile().writeInFile(listOfPath.get(valueOfFile),listOfNumber,"\n");
-        listOfPath.add(new FunctionOfFile().createNewFile(mainPath,nameOfNameOfFiles));
+        listOfPath.add(new FunctionOfFile().createNewFile(mainPath, nameOfInformationFromFiles));
+        new FunctionOfFile().writeInFile(listOfPath.get(valueOfFile), listOfNumber, "\n");
+        listOfPath.add(new FunctionOfFile().createNewFile(mainPath, nameOfNameOfFiles));
         FindFilesFolders findFilesFolders = new FindFilesFolders(mainPath);
         findFilesFolders.divideFilesFolders();
-        new FunctionOfFile().writeInFile(listOfPath.get(valueOfFile + 1),findFilesFolders.getFiles(),"\n");
+        new FunctionOfFile().writeInFile(listOfPath.get(valueOfFile + 1), findFilesFolders.getFiles(), "\n");
 
     }
 
