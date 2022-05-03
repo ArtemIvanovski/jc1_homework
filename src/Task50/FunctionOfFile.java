@@ -25,7 +25,6 @@ public class FunctionOfFile {
         try {
             FileWriter writer = new FileWriter(pathToFile, false);
             for (T element : list) {
-                System.out.println(element);
                 writer.write(element + symbol);
             }
             writer.close();
