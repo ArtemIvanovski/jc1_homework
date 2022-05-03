@@ -5,14 +5,11 @@ import Task48.FunctionOfList;
 import java.util.ArrayList;
 
 public class MyThread implements Runnable {
-    private Thread thread;
-    private ArrayList<Integer> arrayList;
-    private double mean;
-    private String nameOfThread;
+    final private double mean;
+    final private String nameOfThread;
 
     public MyThread(ArrayList<Integer> arrayList, String nameOfThread) {
-        thread = new Thread(this, nameOfThread);
-        this.arrayList = arrayList;
+        Thread thread = new Thread(this, nameOfThread);
         this.mean = (double) new FunctionOfList().sumElementsOfList(arrayList) / arrayList.size();
         this.nameOfThread = nameOfThread;
         thread.start();
