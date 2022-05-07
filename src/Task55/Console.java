@@ -10,6 +10,6 @@ public class Console {
         }
     }
     private void showError(){
-        System.out.println("Error with thread");
+        System.out.println("Error with thread ");
     }
 }
